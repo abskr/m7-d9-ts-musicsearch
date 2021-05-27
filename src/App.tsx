@@ -4,13 +4,12 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { Result, Track } from './types/types'
 
 import Homepage from './components/Homepage'
-// import DetailPage from './components/DetailPage'
 
 function App() {
 
   const [searchInput, setSearchInput] = useState<string>("")
   const [searchResults, setSearchResults] = useState<Result[]>([])
-  const [track, setTrack] = useState<Track>()
+  const [track, setTrack] = useState<Track | null >(null)
   
   const handleInput = (e:any) => {
     let {value} = e.target
