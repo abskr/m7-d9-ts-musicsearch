@@ -30,6 +30,8 @@ const Homepage = (props: HomepageProps & RouteComponentProps) => {
             {props.searchResults.map((result:any) => (
               <ListGroup.Item key={result.id} onClick={() => props.getTrack(result.id)}>
                 <img src={result.album.cover} alt="Album's cover" />
+                <p>{result.album.title}</p>
+                <p>{result.artist.name}</p>
               </ListGroup.Item>
             ))}
         </ListGroup>

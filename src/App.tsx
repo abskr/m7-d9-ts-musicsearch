@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { Result, Track } from './types/types'
 
 import Homepage from './components/Homepage'
+// import DetailPage from './components/DetailPage'
 
 function App() {
 
@@ -53,6 +54,10 @@ function App() {
         path='/' 
         exact 
         render={(routerProps) => <Homepage {...routerProps} handleInput={handleInput} handleSubmit={handleSubmit} searchInput={searchInput} searchResults={searchResults} getTrack={getTrack} />} />
+        {/* <Route 
+        path='/details/:id' 
+        exact 
+        render={(routerProps) => <DetailPage {...routerProps} track={track} />} /> */}
     </Router>
   );
 }

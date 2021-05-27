@@ -1,20 +1,3 @@
-  
-export interface ISearchResult {
-  data: { data: any; next: string; total: number; album?: [] };
-}
-export interface ISearchResultAlbum {
-  cover: string;
-  cover_small: string;
-}
-
-export interface IEventTrackId {
-  target: { id: number; offsetParent: { id: number } };
-}
-
-export interface SearchResults {
-  data: Result[];
-}
-
 export interface Result {
   id: number;
   readable: boolean;
